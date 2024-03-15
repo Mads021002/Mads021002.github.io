@@ -197,15 +197,9 @@ nav ul li {
 
 
 /* Projects section */
-
 .projects {
   padding: 32px 0;
   margin-top: 2rem;
-}
-
-.project-pic {
-  width: 65%;
-  height: 60%;
 }
 
 .projects-container {
@@ -214,40 +208,50 @@ nav ul li {
   justify-content: center;
 }
 
-.projects-title {
+.projects-title,
+.project-title,
+.project-details {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--bottom-margin); /* Apply consistent margin-bottom */
 }
 
 .project-container {
-  text-align: center;
   width: 21.875rem;
+  height: 500px; /* Define height here if all project containers are to be the same height */
   padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  margin: 10px; /* Adjust or remove if you want different spacing around the cards */
+  position: relative;
+}
+
+.project-pic {
+  width: 65%; /* Consider changing to 100% if you want the image to cover the full width of the card */
+  height: 60%; /* Adjust the height or consider using object-fit if you want to maintain the aspect ratio */
+  object-fit: cover; /* Uncomment if you decide to use it */
+  padding-top: 10px;
 }
 
 .project-container p {
   padding: 0.4rem;
 }
 
-.project-title {
-  margin-bottom: var(--bottom-margin);
+.project-link {
+  position: absolute;
+  bottom: 20px; /* Adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  /* ... your existing properties for styling the link ... */
 }
 
-.project-details {
-  margin-bottom: var(--bottom-margin);
-}
 
-.project-card {
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--secondary-shadow);
-  padding: 20px;
-  margin: 10px;
-}
 
 /* CONTACT SECTION */
 .contact {
   margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .contact h2 {
@@ -258,8 +262,8 @@ nav ul li {
 .contact-form-container {
   max-width: 40.75rem;
   margin: 0 auto;
-  padding: 0.938rem;
-  border-radius: 5px;
+  padding: 2rem;
+  border-radius: 5px 5px 0 0;
   box-shadow: 0 3px 10px var(--primary-shadow);
 }
 
@@ -267,6 +271,7 @@ nav ul li {
   line-height: 2.7em;
   font-weight: var(--bold-font);
   color: var(--primary-color);
+  display: block;
 }
 
 .contact-form-container textarea {
@@ -287,7 +292,6 @@ nav ul li {
 }
 
 .input-field::placeholder {
-  padding: 0.5rem;
   color: var(--primary-color);
 }
 
@@ -307,25 +311,42 @@ nav ul li {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
   cursor: pointer;
+  color: #fff;
 }
 
-/* SOCIAL ICONS (Removed) */
-/* .socials {
+.contact-medias {
+  background-color: #8b8eaf;
+  text-align: center;
+  padding-top: 15px;
+  color: #fff;
+  max-width: 40.75rem;
+  margin-left: auto; /* These two lines center the block horizontally */
+  margin-right: auto;
+  display: flex; /* Use flexbox for vertical centering if needed */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Align children in the center vertically */
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+}
+
+
+.contact-medias-svg {
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  right: 1%;
-  bottom: 50%;
+  gap: 15px;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.contact-medias img {
+  width: 30px;
+  height: 30px;
 }
 
-.socicon {
-  width: 2rem;
-  height: 2rem;
-} 
-*/
 
-/* Books page */
-section h2 {
+
+
+/* Books page (books.html) */
+#books-section h2 {
   margin-top: 15px;
   text-align: center;
   padding: 15px;
@@ -348,7 +369,9 @@ section h2 {
 
 .book-card img {
   width: 100%;
-  height: auto;
+  height: 300px;
+  object-fit: cover;
+  padding: 3px;
 }
 
 .book-card h3 {
@@ -412,36 +435,191 @@ section h2 {
 }
 
 
+/* CV page (cv.html) */
+.cv-content {
+  max-width: 100%;
+  padding: 0 20px; /* Adds padding to the left and right */
+  margin-top: 100px; /* Adds space between navbar and CV content */
+}
+
+.cv-content header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 250px; /* Gives space for the 'CV' title */
+}
+
+.cv-title {
+  font-size: 4em;
+  margin: 0;
+  padding-left: 0px; /* Adjust if more space needed */
+  position: relative;
+  bottom: 0;
+  color: #333; /* Your website's title color */
+}
+
+.cv-section h2 {
+  font-size: 2em;
+  border-bottom: 4px solid #ddd; /* Color of your choice */
+  padding-bottom: 10px;
+  margin-top: 40px;
+  color: #333; /* Your website's section heading color */
+  text-align: left;
+}
+
+.cv-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.cv-entry, .cv-entry * {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.cv-entry:hover {
+  background-color: #f4f4f4; /* Change as per your color theme for hover effect */
+  padding: 10px;
+}
+
+.cv-dates {
+  flex-basis: 20%;
+  color: #666; /* Your website's date color */
+}
+
+.cv-role-work-description p {
+  padding-right: 5px;
+}
+
+.cv-details {
+  flex-basis: 75%;
+  padding-left: 20px; /* Based on your website's design */
+}
+
+.cv-institution {
+  font-weight: bold;
+  color: #333; /* Your website's institution name color */
+  margin-bottom: 5px;
+}
+
+.cv-study-subject {
+  margin-bottom: 2px;
+}
+
+.cv-role-work {
+    font-weight: bold;
+  }
+
+.cv-institution-work {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.cv-role-work-description-title {
+  font-weight: bold;
+}
+
+.cv-role-work-description {
+  font-weight: normal;
+}
+
+
+.cv-location {
+  color: #666; /* Your website's location color */
+}
+
+/* cv.html responsive styling */
+@media (max-width: 768px) {
+  .cv-content {
+      padding: 0 10px;
+  }
+
+  .cv-title {
+      font-size: 3em; /* Smaller size for mobile */
+  }
+
+  header {
+      height: 100px; /* Less space on mobile */
+  }
+
+  .cv-entry {
+      flex-direction: column;
+  }
+
+  .cv-dates, .cv-details {
+      width: auto;
+  }
+}
+
+.cv-section .cv-entry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.cv-section .cv-dates {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cv-section .cv-details {
+  border-left: 3px solid #333; /* Adjust color as needed */
+  padding-left: 15px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.cv-section .cv-description {
+  margin-top: 10px;
+}
+
+.cv-description ul {
+  margin-top: 10px; /* Adds a little space above the list */
+  list-style-type: disc; /* Other options include disc, square, etc. */
+  padding-left: 20px; /* Gives space for bullet points */
+}
+
+.cv-description li {
+  margin-bottom: 5px; /* Adds space between list items */
+}
+
 
 
 /* FOOTER */
 footer {
+  position: relative; /* Set relative positioning for the footer */
   background-color: var(--bg-color);
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
-  
 }
+
+footer .footer-image {
+  position: absolute; /* Absolute position for the SVG */
+  right: 10px; /* Adjust the right position to your preference */
+  bottom: 10px; /* Adjust the bottom position to your preference */
+  width: 150px; /* Set a fixed width for your SVG */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  footer .footer-image {
+    display: none; /* Hide the SVG on smaller screens */
+  }
+}
+
 footer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* SCROLL UP BUTTON (removed) */
-/*
-.scroll-up {
-  position: fixed;
-  right: 0.5%;
-  bottom: 3%;
-  cursor: pointer;
-}
 
-.up-arrow {
-  width: 3rem;
-  height: 3rem;
-}
-*/
 
 
 /* RESPONSIVENESS */
