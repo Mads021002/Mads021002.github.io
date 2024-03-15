@@ -97,34 +97,39 @@ const audiobooks = [
   }
   
   // Call the function when the page loads
-  generateAudiobookCards();
+generateAudiobookCards();
     
-const blog = [
-    { title: "Blog title name", imageUrl: "https://rb.gy/06nwy2", date: "13/02/24", pageUrl: "https://www.linkedin.com/in/madsdamgaard02/" },
-    { title: "Blog title name", imageUrl: "https://rb.gy/06nwy2", date: "13/02/24", pageUrl: "https://www.linkedin.com/in/madsdamgaard02/" },
-    { title: "Blog title name", imageUrl: "https://rb.gy/06nwy2", date: "13/02/24", pageUrl: "https://www.linkedin.com/in/madsdamgaard02/" },
-    { title: "Blog title name", imageUrl: "https://rb.gy/06nwy2", date: "13/02/24", pageUrl: "https://www.linkedin.com/in/madsdamgaard02/" },
-];
 
-function generateBlogCards () {
-    const container = document.getElementById('blog-container');
-    blog.forEach(blog => {
-        const card = `<div class="blog-card">
-        <img src="${blog.imageUrl}" alt="Cover image of ${blog.title}" />
-        <h3><a href="${blog.pageUrl}">${blog.title}</a></h3>
-        <div class="blog-card-inner">
-        <p>${blog.date}</p>
-        <p>Mads Damgaard</p>
-        </div>
-        </div>`;
-        container.innerHTML += card;
-    });
-}
 
-generateBlogCards ();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("videoModal");
+    const btn = document.getElementById("videoLink"); // Still works as it's targeting the id
+    const span = document.getElementsByClassName("close")[0];
+    const videoPlayer = document.getElementById("videoPlayer");
+  
+    btn.onclick = function(e) {
+      modal.style.display = "block";
+      videoPlayer.play();
+    };
+  
+    span.onclick = function() {
+      modal.style.display = "none";
+      videoPlayer.pause();
+      videoPlayer.currentTime = 0; // Reset the video
+    };
+  
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0; // Reset the video
+      }
+    };
+  });
   
 
-/* CV page (cv.html) */
+
 
 
 
