@@ -30,9 +30,9 @@ const books = [
     { title: "The art of thinking clearly", imageUrl: "https://imgcdn.saxo.com/_9780062219695"},
     { title: "Surely you are joking Mr. Feynman", imageUrl: "https://imgcdn.saxo.com/_9780393355628"},
     { title: "The mom test", imageUrl: "https://m.media-amazon.com/images/I/61ixLoT4lyL._AC_UF1000,1000_QL80_.jpg"},
-    { title: "fall in love with the problem, not the solution", imageUrl: "https://m.media-amazon.com/images/I/71tl+PBqA-L._AC_UF1000,1000_QL80_.jpg"},
+    { title: "Fall in love with the problem, not the solution", imageUrl: "https://m.media-amazon.com/images/I/71tl+PBqA-L._AC_UF1000,1000_QL80_.jpg"},
     { title: "Walt Disney - An American Original", imageUrl: "https://imgcdn.saxo.com/_9781368083966"},
-    { title: "det første skridt – 200 måder at få ting til at ske", imageUrl: "https://images.bogportalen.dk/images/9788750063155.jpg"},
+    { title: "Det første skridt – 200 måder at få ting til at ske", imageUrl: "https://images.bogportalen.dk/images/9788750063155.jpg"},
     { title: "Atomic Habits", imageUrl: "https://imgcdn.saxo.com/_9781847941831"},
     { title: "The Lean Startup", imageUrl: "https://imgcdn.saxo.com/_9780307887894"},
     { title: "Customer Success", imageUrl: "https://imgcdn.saxo.com/_9781119168294"},
@@ -99,34 +99,6 @@ const audiobooks = [
   // Call the function when the page loads
 generateAudiobookCards();
     
-
-
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById("videoModal");
-    const btn = document.getElementById("videoLink"); // Still works as it's targeting the id
-    const span = document.getElementsByClassName("close")[0];
-    const videoPlayer = document.getElementById("videoPlayer");
-  
-    btn.onclick = function(e) {
-      modal.style.display = "block";
-      videoPlayer.play();
-    };
-  
-    span.onclick = function() {
-      modal.style.display = "none";
-      videoPlayer.pause();
-      videoPlayer.currentTime = 0; // Reset the video
-    };
-  
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-        videoPlayer.pause();
-        videoPlayer.currentTime = 0; // Reset the video
-      }
-    };
-  });
   
 
 

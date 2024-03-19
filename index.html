@@ -46,42 +46,37 @@
 
     <!-- Hero Section -->
     <section class="hero" id="about">
-      <div>
-        <img
-        src="assets/icons/Group 11.svg"
-        alt="mads-damgaard"
-        loading="lazy"
-        class="hero-img"
-      />
-      </div>
-
-      <div class="bio animate__animated animate__shakeX">
-        <h2 class="bio-title">About this site</h2>
-        <p class="bio-text">
-          Hi there! I created this site to challenge myself with a new project. 
-          You can view it as a medium for me to display myself to you apart from the traditional medias of e.g. Instagram and LinkedIn.
-        </p>
+      <div class="hero-section">
+        <h1>Hi, I'm Mads.</h1>
+        <div class="location">
+          <img src="assets/graphics/location_icon.svg" alt="Location" class="location-icon">
+          <span>Copenhagen, DK</span>
+        </div>
+        <div class="hero-description">
+        <p>I’m a future software developer with a passion for startups, creating and good food. Learn more <a href="about.html">about me</a>.</p>
+        </div>
       </div>
 </section>
 
+<div class="trusted">
+  <div class="trusted-text">Trusted by these companies</div>
+  <img src="assets/graphics/McDonalds.svg" alt="McDonald's Logo">
+  <img src="assets/graphics/make_influence.svg" alt="Make Influence Logo">
+  <img src="assets/graphics/superbrugsen.svg" alt="SuperBrugsen Logo">
+  <img src="assets/graphics/custimy.svg" alt="Custimy Logo">
+</div>
+
     <!-- More about -->
-    <section class="more-about">
-      <h2>About Me</h2>
-      <p>
-        My name is Mads Damgaard, I'm currently 21 years old living in Copenhagen, Denmark.
-        I recently decided that I want to pursue a bachelors degree in Software Development at <a href="https://itu.dk/Uddannelser/Bacheloruddannelser/Softwareudvikling" target="_blank">ITU,</a>
-        starting from september 2024. Until then I will be spending April and May studying math from 8:30 to 11:30 at Niels Brock. 
-      </p>
-      <p>
-        When I was 19, I moved to Barcelona, Spain. Post my high school graduation (HHX), I took opportunity to take an internship abroad (<a href="https://ufm.dk/uddannelse/tilskud-til-udveksling-og-internationale-projekter/oplaering-i-udlandet-opu">PIU</a>), 
-        where I got a two year education as a commercial assistant with sales, within one year instead.
-        <br>
-        Barcelona thought me a ton of stuff about myself, culture and how to navigate uncertain situations. Being in a foreign country, where you don't speak the language, while working for a hectic pre-product market fit startup builds gut!
-      </p>
-      <p>
-        I have a ton of interesting stories, if you want to hear more, feel free to fill out the contact form <a href="#contact">below</a> or give me a shout on <a href="https://www.linkedin.com/in/madsdamgaard02/">LinkedIn.</a>
-      </p>
-    </section>
+    <div class="more-about">
+      <div class="more-about-content">
+        <h2 class="more-about-title">ABOUT THIS SITE</h2>
+        <p class="more-about-subtitle">Blog Essay</p>
+        <p class="more-about-description">
+          I created this site to challenge myself with a new project. Click below to learn why I decided to build this.
+        </p>
+        <a href="assets/pages/blog.html" class="more-about-button">View more</a>
+      </div>
+    </div>
 
     <!-- Skills section -->
     <section class="skills" id="blog">
@@ -90,40 +85,40 @@
       <div class="skills-wrapper">
         <div class="first-set animate__animated animate__pulse">
           <img
-            src="assets/icons/icons8-html-5.svg"
+            src="assets/graphics/html.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/icons8-css3.svg"
+            src="assets/graphics/css.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/icons8-javascript.svg"
+            src="assets/graphics/javascript.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
         </div>
-        <h3>Coming up...</h3>
+        <h3 class="skills-next">Coming up...</h3>
         <div class="second-set animate__animated animate__pulse">
           <img
-            src="assets/icons/python-5.svg"
+            src="assets/graphics/python-5.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/icons8-react-native.svg"
+            src="assets/graphics/react.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
           />
           <img
-            src="assets/icons/json.svg"
+            src="assets/graphics/json.svg"
             alt=""
             loading="lazy"
             class="icon icon-card"
@@ -137,15 +132,14 @@
 
     <!-- Books section -->
     <section class="books" id="books">
-      <h2>Books I read</h2>
-      <div class="books-wrapper">
-        <p>I try reading a lot of books, both for personal development and to learn new things.</p>
-        <p>My general philosophy is that, it is better to read one good book multiple times and live it's principles, rather than read 10 books that all fade out.</p>
-        <br>
-        <p>So I decided to dedicate a page on my site to give you an insight into the books I'm reading, view them <a href="assets/pages/books.html">here.</a></p>
-
+      <div class="books-container">
+        <h2 class="books-title">BOOKS I READ</h2>
+        <p class="books-index-description">
+          I believe in the many benefits of reading books, so I bought myself a few to say the least, click below to view what I read.
+        </p>
+        <a href="assets/pages/books.html" class="books-button">View more</a>
       </div>
-    </section>
+  </section>
 
     <!-- Projects section -->
     <section class="projects" id="projects">
@@ -153,7 +147,7 @@
       <div class="projects-container">
         <div class="project-container project-card">
           <img
-            src="assets/icons/Group 3.svg"
+            src="assets/graphics/dragon_mag_cover.svg"
             alt="dragon_game"
             loading="lazy"
             class="project-pic"
@@ -162,11 +156,11 @@
           <p class="project-details">
             I followed <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamps'</a> JavaScript tutorial on how to develop a role playing game, learning how to work with arrays, strings, objects, functions, loops, if/else statements, and more.
           </p>
-          <a href="https://github.com/Mads021002/Role-Play-Game-FCC.git" target="_blank" class="project-link">Check it Out</a>
+          <a href="./Role playing game JS/RPG_index.html" target="_blank" class="project-link">Check it Out</a>
         </div>
         <div class="project-container project-card">
           <img
-            src="assets/icons/Group 8.svg"
+            src="assets/graphics/filmflix_mag_cover.svg"
             alt="filmflix"
             loading="lazy"
             class="project-pic"
@@ -179,7 +173,7 @@
         </div>
         <div class="project-container project-card">
           <img
-            src="assets/icons/Group 9.svg"
+            src="assets/graphics/kombucha_mag_cover.svg"
             alt="kombucha"
             loading="lazy"
             class="project-pic"
@@ -243,19 +237,6 @@
           </form>
         </div>
       </div>
-      <div class="contact-medias">
-      <p>Find me here</p>
-      <div class="contact-medias-svg">
-        <div class="contact-medias-li">
-          <a href="https://www.linkedin.com/in/madsdamgaard02/" target="_blank"><img src="assets/icons/linkedIn.svg" alt="linkedin-logo"></a>
-        </div>
-        <div class="contact-medias-mail">
-          <a href="mailto:damgaard.magnussen@gmail.com"><img src="assets/icons/mail.svg" alt="mail-logo"></a>
-        </div>
-        <div class="contact-medias-github">
-          <a href="https://github.com/Mads021002" target="_blank"><img src="assets/icons/icons8-github.svg" alt="github-logo"></a>
-        </div>
-      </div>
     </div>
     </section>
 
@@ -263,29 +244,23 @@
     <!-- Footer section -->
 <!-- Footer section -->
 <footer>
-  <p class="copy">&copy; Copyright 2024</p>
-  <p class="copy">
-    Built by
-    <a href="https://www.linkedin.com/in/madsdamgaard02/" target="_blank">Mads Damgaard</a>
+  <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/madsdamgaard02/" target="_blank">
+          <img src="assets/graphics/linkedIn_footer.svg" alt="LinkedIn">
+      </a>
+      <a href="mailto:damgaard.magnussen@gmail.com">
+          <img src="assets/graphics/mail_footer.svg" alt="Mail">
+      </a>
+      <a href="https://github.com/Mads021002" target="_blank">
+          <img src="assets/graphics/github_footer.svg" alt="Github">
+      </a>
+  </div>
+  <p class="footer-text">
+      Copyright © 2024 Mads Damgaard. All rights reserved.
   </p>
-  
-  <img src="assets/images/Group 18.svg" alt="Footer Image" class="footer-image">
+  <img src="assets/graphics/footer_hiregreat.svg" alt="Footer Image" class="footer-image">
 </footer>
 
-
-
-
-
-    <!-- Video Modal (initially hidden) -->
-<div id="videoModal" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <video id="videoPlayer" controls>
-      <source src="./assets/filmflix.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
     <!-- Ion icons scripts -->
     <script
       type="module"
