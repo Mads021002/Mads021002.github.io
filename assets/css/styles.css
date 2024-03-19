@@ -74,7 +74,7 @@ nav {
 nav h1 {
   color: var(--third-color);
   display: block; 
-  font-size: 2rem; 
+  font-size: 1.5rem; 
 }
 
 
@@ -116,7 +116,7 @@ nav ul li {
 }
 
 .hero-section h1 {
-  background-image: linear-gradient(to bottom right, #DCDDF4, #97B2EF 10%, #8774F5 50%, #E17191);
+  background-image: linear-gradient(45deg, #EADCF4, #DCDDF4 30%, #B6C5F8 30%, #8774F5 40%, #E17191);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -127,6 +127,7 @@ nav ul li {
   padding-top: 60px;
   padding-bottom: 30px;
 }
+
 
 .location {
   display: flex;
@@ -237,23 +238,6 @@ nav ul li {
 background-color: var(--primary-button-color);
 }
 
-/* Additional responsive adjustments as needed for smaller screens */
-@media (max-width: 768px) {
-.more-about {
-flex-direction: column;
-text-align: center;
-}
-
-.more-about-content {
-max-width: 100%;
-}
-
-.more-about-button {
-margin-bottom: 30px;
-}
-}
-
-
 /* Skills section */
 .skills {
   max-width: 68.75rem;
@@ -343,23 +327,6 @@ margin-bottom: 30px;
 background-color: var(--primary-button-color);
 }
 
-/* Additional responsive adjustments as needed for smaller screens */
-@media (max-width: 768px) {
-.books {
-flex-direction: column;
-text-align: center;
-}
-
-.books-container {
-max-width: 100%;
-}
-
-.books-button {
-margin-bottom: 30px;
-}
-}
-
-
 /* Projects section */
 .projects {
   padding: 32px 0;
@@ -437,6 +404,7 @@ margin-bottom: 30px;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 5px;
+  font-family: "Inter", sans-serif;
 }
 
 .contact-form-container label {
@@ -736,66 +704,6 @@ margin-bottom: 30px;
   font-weight: normal;
 }
 
-
-
-
-/* cv.html responsive styling */
-@media (max-width: 768px) {
-  .cv-content {
-      padding: 0 10px;
-  }
-
-  .cv-title {
-      font-size: 3em; 
-  }
-
-  header {
-      height: 100px; 
-  }
-
-  .cv-entry {
-      flex-direction: column;
-  }
-
-  .cv-dates, .cv-details {
-      width: auto;
-  }
-}
-
-.cv-section .cv-entry {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.cv-section .cv-dates {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.cv-section .cv-details {
-  border-left: 3px solid var(--secondary-color); 
-  padding-left: 15px;
-  margin-left: 10px;
-  position: relative;
-}
-
-.cv-section .cv-description {
-  margin-top: 10px;
-}
-
-.cv-description ul {
-  margin-top: 10px; 
-  list-style-type: disc; 
-  padding-left: 20px; 
-}
-
-.cv-description li {
-  margin-bottom: 5px; 
-}
-
-
-
 /* FOOTER */
 footer {
   display: flex;
@@ -868,7 +776,22 @@ footer {
 
 /* RESPONSIVENESS */
   /* hero section */
+/* cv.html responsive styling */
 
+@media (max-width: 780px) {
+  .books-container{
+  background: none;
+  background-color: var(--bg-color); 
+  }
+
+  .more-about-content{
+    background: none;
+    background-color: var(--bg-color); 
+    }
+}
+
+
+/*_________*/
   @media (max-width: 768px) {
     .hero-section {
       margin-top: -4rem;
@@ -895,11 +818,87 @@ footer {
     .location-icon {
       height: 18px;
     }
-  };
+
+    .cv-content {
+      padding: 0 10px;
+  }
+
+  .cv-title {
+      font-size: 3em; 
+  }
+
+  header {
+      height: 100px; 
+  }
+
+  .cv-entry {
+      flex-direction: column;
+  }
+
+  .cv-dates, .cv-details {
+      width: auto;
+  }
+  
+  .books {
+    flex-direction: column;
+    text-align: center;
+    }
+    
+    .books-container {
+    max-width: 100%;
+    }
+    
+    .books-button {
+    margin-bottom: 30px;
+    }
+    
+    .more-about {
+      flex-direction: column;
+      text-align: center;
+      }
+      
+      .more-about-content {
+      max-width: 100%;
+      }
+      
+      .more-about-button {
+      margin-bottom: 30px;
+      }
+      
+      .cv-section .cv-entry {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+      
+      .cv-section .cv-dates {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .cv-section .cv-details {
+        border-left: 3px solid var(--secondary-color); 
+        padding-left: 15px;
+        margin-left: 10px;
+        position: relative;
+      }
+      
+      .cv-section .cv-description {
+        margin-top: 10px;
+      }
+      
+      .cv-description ul {
+        margin-top: 10px; 
+        list-style-type: disc; 
+        padding-left: 20px; 
+      }
+      
+      .cv-description li {
+        margin-bottom: 5px; 
+      }
+}
 
 @media screen and (max-width: 720px) {
-  
-
   /* navbar */
   nav {
     padding: 1.5rem 1rem;
@@ -967,6 +966,13 @@ footer {
   }
 }
 
+
+@media screen and (max-width: 580px) {
+  .gowish-logo {
+    display: none; 
+  }
+}
+
 @media screen and (max-width: 420px) {
   .hero-section {
     margin-top: -4rem; 
@@ -1001,4 +1007,18 @@ footer {
     max-width: 18.3rem; 
     margin: 0 auto; 
   }
+  .project-container {
+    max-width: 17.875rem;
+  }
+  
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+  
+  .contact-medias {
+    max-width: 17.875rem;
+  }
 }
+
+
+

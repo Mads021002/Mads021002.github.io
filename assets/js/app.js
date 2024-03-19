@@ -19,6 +19,7 @@ navLink.forEach((link) =>
 );
 
 
+
 // script.js
 // Array of book objects
 const books = [
