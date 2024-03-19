@@ -116,14 +116,15 @@ nav ul li {
 }
 
 .hero-section h1 {
-  background-image: linear-gradient(45deg, #EADCF4, #DCDDF4 30%, #B6C5F8 30%, #8774F5 40%, #E17191);
-  -webkit-background-clip: text;
+  background-image: url(../graphics/linear-bg-img.svg);
+  background-size: fill;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
   display: block;
   font-size: 75px;
   font-weight: bold;
-  -webkit-text-fill-color: transparent;
   padding-top: 60px;
   padding-bottom: 30px;
 }
@@ -455,10 +456,13 @@ background-color: var(--primary-button-color);
 
 /* Books page (books.html) */
 #books-section h2 {
-  background-image: linear-gradient(to bottom right, #DCDDF4, #97B2EF 5%, #8774F5 30%, #E17191 80%);
-  -webkit-background-clip: text;
+  background-image: url(../graphics/linear-bg-img.svg);
+  background-size: fill;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  display: block;
   margin-top: 50px;
   padding: 15px;
   text-align: center;
@@ -570,10 +574,13 @@ background-color: var(--primary-button-color);
 
 /* Blog page (blog.html) */
 .blog-section h2 {
-  background-image: linear-gradient(to bottom right, #DCDDF4, #97B2EF 5%, #8774F5 30%, #E17191 80%);
-  -webkit-background-clip: text;
+  background-image: url(../graphics/linear-bg-img.svg);
+  background-size: fill;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  display: block;
   margin: 35px 0 25px;
   text-align: center;
   padding: 15px;
@@ -610,6 +617,50 @@ background-color: var(--primary-button-color);
   padding: 20px;
 }
 
+.blog-divider {
+  margin: 150px 0;
+}
+
+.about-blog {
+  max-width: 57.293%;
+  margin: 0 auto;
+}
+
+.about-blog-header {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-blog-quote {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-blog-content ul {
+  list-style: disc;
+  padding: 0;
+}
+
+.about-blog-content ul p {
+  padding-bottom: 10px;
+}
+
+.about-blog-content ul li {
+  margin-bottom: 10px;
+}
+
+.about-blog-content p {
+  line-height: 1.6;
+  padding-top: 10px;
+}
+
+.about-blog-content .introduction {
+  margin-top: 20px;
+}
+
 
 /* CV page (cv.html) */
 .cv-content {
@@ -626,10 +677,13 @@ background-color: var(--primary-button-color);
 }
 
 .cv-title {
-  background-image: linear-gradient(to bottom right, #DCDDF4, #97B2EF 5%, #8774F5 30%, #E17191 80%);
-  -webkit-background-clip: text;
+  background-image: url(../graphics/linear-bg-img.svg);
+  background-size: fill;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  display: block;
   font-size: 4em;
   margin: 0;
   padding-left: 0px; 
@@ -687,7 +741,7 @@ background-color: var(--primary-button-color);
 }
 
 .cv-role-work {
-    font-weight: bold;
+  font-weight: bold;
   }
 
 .cv-institution-work {
@@ -702,6 +756,38 @@ background-color: var(--primary-button-color);
 
 .cv-role-work-description {
   font-weight: normal;
+}
+
+.cv-section .cv-entry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.cv-section .cv-dates {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cv-section .cv-details {
+  border-left: 3px solid var(--secondary-color); 
+  padding-left: 15px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.cv-section .cv-description {
+  margin-top: 10px;
+}
+
+.cv-description ul {
+  margin-top: 10px; 
+  list-style-type: disc; 
+  padding-left: 20px; 
+}
+
+.cv-description li {
+  margin-bottom: 5px; 
 }
 
 /* FOOTER */
@@ -740,7 +826,6 @@ footer {
 }
 
 .footer-image {
-
   align-self: flex-end; 
   background-color: var(--footer-color); 
   margin-bottom: 0px; 
@@ -753,30 +838,7 @@ footer {
   order: 2;
 }
 
-
-/* Additional media query to handle layout on smaller screens */
-@media (max-width: 768px) {
-  footer {
-      flex-direction: column;
-      background-color: var(--footer-color);
-  }
-  .footer-socials {
-      margin-bottom: 20px;
-      background-color: var(--footer-color);
-  }
-  .footer-image {
-      margin-top: 20px;
-      background-color: var(--footer-color);
-  }
-}
-
-
-
-
-
 /* RESPONSIVENESS */
-  /* hero section */
-/* cv.html responsive styling */
 
 @media (max-width: 780px) {
   .books-container{
@@ -787,11 +849,21 @@ footer {
   .more-about-content{
     background: none;
     background-color: var(--bg-color); 
+    justify-content: center;
+    text-align: center;
     }
+
+  .more-about p {
+    margin: auto;
+    padding: 10px 0;
+  }
+
+  .books-container p {
+    margin: auto;
+    padding: 15px 0;
+  }
 }
 
-
-/*_________*/
   @media (max-width: 768px) {
     .hero-section {
       margin-top: -4rem;
@@ -896,6 +968,18 @@ footer {
       .cv-description li {
         margin-bottom: 5px; 
       }
+      footer {
+        flex-direction: column;
+        background-color: var(--footer-color);
+    }
+    .footer-socials {
+        margin-bottom: 20px;
+        background-color: var(--footer-color);
+    }
+    .footer-image {
+        margin-top: 20px;
+        background-color: var(--footer-color);
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -938,7 +1022,7 @@ footer {
   }
 
   .more-about p {
-    text-align: justify;
+    text-align: center;
   }
 
   /* skills icons */
@@ -995,13 +1079,6 @@ footer {
     font-size: 12px; 
   }
 
-  .hero-section img {
-    height: auto; 
-    width: 100%; 
-    max-width: 23rem; 
-    margin: 0 auto; 
-  }
-
   .bio {
     width: 100%; 
     max-width: 18.3rem; 
@@ -1010,6 +1087,7 @@ footer {
   .project-container {
     max-width: 17.875rem;
   }
+
   
   .contact-form-container {
     max-width: 17.75rem;
