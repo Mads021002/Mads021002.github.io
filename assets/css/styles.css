@@ -346,9 +346,10 @@ background-color: var(--primary-button-color);
 
 .projects-title {
   color: var(--third-color);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.projects-title,
 .project-title,
 .project-details {
   text-align: center;
@@ -387,7 +388,7 @@ background-color: var(--primary-button-color);
 
 /* CONTACT SECTION */
 .contact {
-  margin-top: 2rem;
+  margin-top: 4rem;
   padding: 0 1rem;
 }
 
@@ -634,9 +635,13 @@ background-color: var(--primary-button-color);
 }
 
 .about-blog-quote {
-  font-style: italic;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.about-blog-content h3 {
+  margin: 10px 0;
+  padding-top: 6px;
 }
 
 .about-blog-content ul {
@@ -660,6 +665,47 @@ background-color: var(--primary-button-color);
 .about-blog-content .introduction {
   margin-top: 20px;
 }
+
+.blog-content-section {
+  margin-top: 40px;
+}
+
+.about-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.about-images a {
+  flex-basis: calc(33.333% - 20px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.about-images a:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-images a {
+      flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-images a {
+      flex-basis: 100%;
+  }
+}
+
 
 
 /* CV page (cv.html) */
@@ -789,6 +835,18 @@ background-color: var(--primary-button-color);
 .cv-description li {
   margin-bottom: 5px; 
 }
+
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 
 /* FOOTER */
 footer {

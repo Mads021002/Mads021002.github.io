@@ -99,8 +99,27 @@ const audiobooks = [
   
   // Call the function when the page loads
 generateAudiobookCards();
-    
-  
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.toc-link').forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+        });
+      }
+    });
+  }, {
+    rootMargin: '0px',
+    threshold: 0.6 // Adjust this value based on when you want the link to become active
+  });
+
+  document.querySelectorAll('.about-blog-section').forEach(section => {
+    observer.observe(section);
+  });
+});
+
 
 
 
