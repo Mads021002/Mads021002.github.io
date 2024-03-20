@@ -573,7 +573,7 @@ background-color: var(--primary-button-color);
 
 
 
-/* Blog page (blog.html) */
+/* About page (about.html) */
 .blog-section h2 {
   background-image: url(../graphics/linear-bg-img.svg);
   background-size: fill;
@@ -642,6 +642,7 @@ background-color: var(--primary-button-color);
 .about-blog-content h3 {
   margin: 10px 0;
   padding-top: 6px;
+  color: var(--third-color);
 }
 
 .about-blog-content ul {
@@ -668,6 +669,10 @@ background-color: var(--primary-button-color);
 
 .blog-content-section {
   margin-top: 40px;
+}
+
+.blog-content-subtitle {
+  color: var(--third-color);
 }
 
 .about-images {
